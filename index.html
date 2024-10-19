@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Learn English</title>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Learn English for Kids!</h1>
+        </header>
+        <div class="word-section">
+            <div class="word-card" onclick="playSound('cat')">
+                <h2>Word: Cat</h2>
+                <img src="images/cat.png" alt="Cat">
+            </div>
+            <div class="word-card" onclick="playSound('dog')">
+                <h2>Word: Dog</h2>
+                <img src="images/dog.png" alt="Dog">
+            </div>
+            <div class="word-card" onclick="playSound('apple')">
+                <h2>Word: Apple</h2>
+                <img src="images/apple.png" alt="Apple">
+            </div>
+            <div class="word-card" onclick="playSound('ball')">
+                <h2>Word: Ball</h2>
+                <img src="images/ball.png" alt="Ball">
+            </div>
+        </div>
+        <button onclick="window.location.href='quiz.html'">Start Quiz</button>
+        <footer>
+            <p>Let's learn English together!</p>
+        </footer>
+    </div>
+
+    <script>
+        function playSound(word) {
+            const audio = new Audio(`sounds/${word}.mp3`); // Make sure you have word.mp3 files
+            audio.play();
+        }
+    </script>
+</body>
+</html>
